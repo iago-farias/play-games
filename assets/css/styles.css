@@ -66,12 +66,11 @@ header nav a {
 }
 
 .backgroundImage {
-  background-image: url("../images/background-image.png");
-  height: 80%;
+  background-image: url("../images/bg.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   position: relative;
 }
 
@@ -91,7 +90,6 @@ header nav a {
   padding: 1rem 3rem;
   display: flex;
   align-items: center;
-  margin-top: 20rem;
 }
 
 .playButton img {
@@ -99,14 +97,34 @@ header nav a {
 }
 
 .sectionTransition {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 50%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background: linear-gradient(180deg, rgba(255, 173, 43, 0) 0%, #FFAD2B 100%);
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  background: linear-gradient(180deg, rgba(255, 173, 43, 0) 60%, #FFAD2B 100%);
+  position: relative;
+}
+
+.sectionTransition .imageTitle {
+  max-width: 100%;
+  height: auto;
+}
+
+.sectionTransition img {
+  margin-top: 4rem;
+}
+
+.sectionTransition button {
+  margin-top: 4rem;
+}
+
+.sectionTransition button img {
+  margin-top: 0;
+}
+
+.aboutFactSlick {
+  display: none;
 }
 
 .aboutSection {
@@ -126,6 +144,18 @@ header nav a {
   width: 100%;
 }
 
+.aboutDescriptionContainer .playgamesImageTop {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.aboutDescriptionContainer .playgamesImageRight {
+  max-width: 100%;
+  height: auto;
+}
+
 .aboutDescriptionContainer div h1 {
   font-size: 3.5rem;
   font-weight: 400;
@@ -136,15 +166,17 @@ header nav a {
   font-weight: 900;
   font-size: 2rem;
   letter-spacing: 2px;
+  width: 50%;
 }
 
 .aboutDescriptionContainer div .descriptionNormal {
   font-weight: 600;
   font-size: 1.2rem;
   letter-spacing: 2px;
+  width: 50%;
 }
 
-.aboutSectionImage {
+.aboutImageContainer {
   width: 50%; 
   display: flex; 
   align-items: center; 
@@ -244,6 +276,10 @@ header nav a {
   margin-bottom: 5rem;
 }
 
+.attractionsSlick {
+  display: none;
+}
+
 .attractionsGrid {
   display: grid;
   grid-template-columns: repeat(4, 0.4fr);
@@ -259,7 +295,7 @@ header nav a {
   font-family: 'BoldenVan';
   border: 0.2rem solid var(--white);
   border-radius: 20px;
-  min-width: 200px;
+  width: 200px;
   padding: 1rem 0;
   border-bottom-right-radius: 0;
   transition: all ease-in .15s;
@@ -326,13 +362,19 @@ header nav a {
 }
 
 .unitsSection h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .unitsContainer {
   display: flex;
   flex-direction: row;
+  margin-top: 2rem;
+}
+
+.unitsSlick {
+  display: none;
 }
 
 .unitContainer {
@@ -355,7 +397,7 @@ header nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 7.27273px 9.09091px rgba(0, 0, 0, 0.27);;
+  box-shadow: 0px 7.27273px 9.09091px rgba(0, 0, 0, 0.27);
 }
 
  .unitButton {
@@ -388,7 +430,6 @@ header nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   padding: 6rem 2rem 2rem 2rem;
   text-align: center;
 
@@ -433,7 +474,7 @@ header nav a {
   position: relative;
   margin-top: -100px;
   z-index: -10;
-  padding: 12rem 0 20rem 0;
+  padding: 12rem 2rem 5rem 2rem;
 }
 
 .signUpSection h2 {
@@ -461,8 +502,8 @@ header nav a {
   padding: 1rem 1rem;
   color: #4E5A70;
   border-radius: 8px;
+  width: 400px;
   border: 0;
-  min-width: 400px;
 }
 
 .signUpSection form label {
@@ -475,13 +516,12 @@ header nav a {
   visibility: visible;
   cursor: pointer;
   padding-left: 35px;
-  width: 400px;
+  width: 300px;
   color: var(--white);
   font-weight: 800;
   font-family: 'Nunito';
   margin: 2rem 0;
 }
-
 
 .signUpSection form .agreementCheckContainer input {
   position: absolute;
@@ -490,7 +530,6 @@ header nav a {
   height: 0;
   width: 0;
 }
-
 
 .signUpSection form .agreementCheckContainer .checkmark {
   position: absolute;
@@ -503,29 +542,24 @@ header nav a {
   border-radius: 3px;
 }
 
-/* On mouse-over, add a grey background color */
 .signUpSection form .agreementCheckContainer:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .signUpSection form .agreementCheckContainer input:checked ~ .checkmark {
   background-color: var(--white);
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .signUpSection form .agreementCheckContainer .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .signUpSection form .agreementCheckContainer input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .signUpSection form .agreementCheckContainer .checkmark:after {
   left: 9px;
   top: 5px;
@@ -551,18 +585,22 @@ header nav a {
 
 .footerContent {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: row; 
   height: 100%;
-  width: 100%;  
+  width: 100%; 
 }
 
 .footerContent .contentContainer {
   display: flex;
   flex-direction: column;
   color: var(--white);
-  width: 100%;
+}
+
+.footerContent .contentContainer h3{
+  font-family: 'Nunito';
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 .footerContent .contentContainer nav {
@@ -583,6 +621,27 @@ header nav a {
   flex-direction: column;
   margin-bottom: 2rem;
   line-height: 2rem;
+}
+
+.footerContent .contentContainer .addressContainer b {
+  font-family: 'Nunito';
+  font-weight: 900;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
+.footerContent .contentContainer .addressContainer span {
+  font-family: 'Nunito';
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
+.contactContainer span{
+  font-family: 'Nunito';
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
 }
 
 .authorContainer {
@@ -621,7 +680,31 @@ header nav a {
   color: var(--white);
 }
 
-@media(max-width: 1100px) {
+.addressesContainer {
+  margin: 0 8rem;
+}
+
+.authorContainerMobile {
+  display: none;
+  text-align: center; 
+}
+
+.madeByContainer {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  color: var(--white);
+  font-family: 'Nunito';
+}
+
+.authorContainerDesktop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+
+@media(max-width: 1500px) {
   header {
     justify-content: flex-start;
     padding-left: 2rem;
@@ -635,6 +718,144 @@ header nav a {
     display: none;
   }
 
+ 
+
+  .aboutDescriptionContainer {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+
+  .aboutDescriptionContainer .playgamesImageTop {
+    display: block;
+  }
+
+  .aboutDescriptionContainer .playgamesImageRight {
+    display: none;
+  }
+
+  .aboutDescriptionContainer div .descriptionHighlight {
+    width: 100%;
+  }
+  
+  .aboutDescriptionContainer div .descriptionNormal {
+    width: 100%;
+  }
+
+  .howItWorksSection {
+    margin-top: -150px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/section-image-1-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    justify-content: flex-end;
+    padding: 10rem 0rem;
+  }
+
+  .seeMoreSection {
+    margin-top: -150px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/section-image-2-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    justify-content: center;
+    padding: 12rem 0rem;
+  }
+
+  .rechargeDescriptionSection {
+    margin-top: -150px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/section-image-3-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 780px;
+    justify-content: center;
+    padding: 12rem 0rem;
+  }
+
+  .rechargeDescriptionSection .howItWorksContainer {
+    margin-top: 20rem;
+  }
+
+  .seeMoreContainer {
+    padding-left: 0;
+    margin-top: 18rem;
+    padding: 0 4rem;
+  }
+  
+  .howItWorksContainer {
+    width: 80%;
+    margin-left: 2rem;
+  }
+
+  .aboutFactSlick {
+    display: block;
+  }
+
+  .factsContainer {
+    display: none;
+  }
+  
+  .attractionsSlick {
+    display: block;
+    margin: 0 2rem;
+  }
+
+  .attractionsContainer {
+    width: 150px;
+    height: 100x;
+  }
+
+  .attractionsGrid  {
+    display: none;
+  }
+
+  .unitsSlick {
+    display: block; 
+    width: 80%;
+  }
+
+  .unitsContainer {
+    display: none;
+  }
+
+  .unitContainer {
+    background-color: var(--white);
+    border-radius: 12px;
+    z-index: -1;
+    width: 310px;
+    height: 450px;
+    box-shadow: none;
+  }
+  
+  .markerContainer {
+    background-color: var(--white);
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 7.27273px 9.09091px rgba(0, 0, 0, 0.27);
+    margin-right: 1rem;
+  }
+
+  .signUpSection h2 {
+    width: 80%;
+  }
+
+  .signUpSection form input {
+    width: 90%;
+  }
+  
   .footerContent {
     display: flex;
     flex-direction: column; 
@@ -653,6 +874,18 @@ header nav a {
   .contentDesktop {
     display: none;
   }
+
+  .authorContainerMobile {
+    display: block;
+  }
+
+  .authorContainerDesktop {
+    display: none;
+  }
+
+  .addressesContainer {
+    margin: 0;
+  }  
 
   .footerMobile hr {
     display: block;
