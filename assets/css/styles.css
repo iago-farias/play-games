@@ -7,6 +7,7 @@
 :root {
   --white: #FFFFFF;
   --orange: #F0773C;
+  --light-orange: #FFAF10;
   --light-blue: #2EA8DD;
   --dark-blue: #1C428C;
   --green: #8CC851;
@@ -14,5 +15,647 @@
 }
 
 body {
-  font-family: "BoldenVan";
+  height: 200vh;
 }
+
+p {
+  font-family: 'Nunito';
+  color: var(--white);
+}
+
+h1, h2 {
+  font-family: 'BoldenVan';
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.headerLogo {
+  width: 115px;
+  height: 102px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: 0 3rem;
+}
+
+header nav a {
+  margin-right: 1rem;
+  font-family: "BoldenVan";
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.backgroundImage {
+  background-image: url("../images/background-image.png");
+  height: 80%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.playAreaButton {
+  background-color: var(--light-orange);
+  color: var(--dark-blue);
+  font-family: 'BoldenVan';
+  border: 0;
+  border-radius: 26px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px var(--orange);
+  letter-spacing: 2px;
+}
+
+.playButton {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+.playButton img {
+  margin-left: 1rem;
+}
+
+.sectionTransition {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(255, 173, 43, 0) 0%, #FFAD2B 100%);
+}
+
+.aboutSection {
+  background: linear-gradient(180deg, #FFAD2B 0%, #F27D24 100%);
+  padding: 0 3rem;
+  padding-bottom: 12rem;
+  position: relative;
+  z-index: -1;
+}
+
+.aboutDescriptionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.aboutDescriptionContainer div h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.aboutDescriptionContainer div .descriptionHighlight {
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.aboutDescriptionContainer div .descriptionNormal {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.aboutSectionImage {
+  width: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.dashedCircle {
+  border: 2px dashed var(--white);
+  border-radius: 100%;
+  height: 400px;
+  width: 00px;
+}
+
+.factsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 3rem;
+}
+
+.aboutFact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  max-width: 180px;
+}
+
+.factNumber {
+  font-family: 'BoldenVan';
+  font-size: 3.5rem;
+}
+
+.factDescription {
+  font-family: 'Nunito';
+  font-weight: 700;
+  text-align: center;
+}
+
+.howItWorksSection {
+  margin-top: -150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/image-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 780px;
+  justify-content: center;
+}
+
+.howItWorksContainer {
+  width: 30%;
+  margin-left: 4rem;
+}
+
+.howItWorksContainer h2{
+  font-size: 2.8rem;
+  width: 80%;
+}
+
+.howItWorksContainer p {
+  font-size: 1.2rem;
+  line-break: strict;
+  width: 80%;
+  text-align: left;
+}
+
+.howItWorksButton {
+  background-color: var(--white);
+  color: #649432;
+  padding: 1rem 3rem;
+  box-shadow: 0 4px #649432;
+  margin-top: 2rem;
+}
+
+.attractionsSection {
+  background: linear-gradient(180deg, #2F5FDC 0%, #144CDB 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 12rem 0 20rem 0;
+  margin-top: -100px;
+  z-index: -10;
+  position: relative;
+}
+
+.attractionsSection h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.attractionsSection p {
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.attractionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 0.4fr);
+  gap: 1rem 1rem;
+  justify-items: center;
+}
+
+.attractionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-family: 'BoldenVan';
+  border: 0.2rem solid var(--white);
+  border-radius: 20px;
+  min-width: 200px;
+  padding: 1rem 0;
+  border-bottom-right-radius: 0;
+  transition: all ease-in .15s;
+  cursor: pointer;
+}
+
+.attractionsContainer span {
+  margin-top: 1rem;
+}
+
+.attractionsContainer:hover {
+  background-color: var(--white);
+  color: #FF8800;
+  border-color: #FF8800;
+}
+
+.seeMoreSection {
+  margin-top: -150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/image-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 780px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.seeMoreContainer {
+  padding-left: 65%;
+}
+
+.seeMoreContainer h2{
+  font-size: 2.8rem;
+}
+
+.seeMoreContainer p {
+  font-size: 1.2rem;
+  line-break: strict;
+  text-align: left;
+}
+
+.seeMoreButton {
+  background-color: var(--white);
+  color: #D19A10;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px #D19A10;
+}
+
+
+/*Units Section*/
+
+.unitsSection {
+  background-color: #7CB83C;
+  position: relative;
+  z-index: -10;
+  padding: 12rem 0 20rem 0;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.unitsSection h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.unitsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.unitContainer {
+  background-color: var(--white);
+  border-radius: 12px;
+  position: relative;
+  margin-top: -15px;
+  z-index: -10;
+  max-width: 310px;
+  min-height: 450px;
+  box-shadow: 0px 10px 46px rgba(0, 0, 0, 0.25);
+}
+
+.markerContainer {
+  background-color: var(--white);
+  width: fit-content;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7.27273px 9.09091px rgba(0, 0, 0, 0.27);;
+}
+
+ .unitButton {
+  background-color: #3AA0F7;
+  color: var(--white);
+  padding: 1rem 1rem;
+  box-shadow: 0 4px #2A75B8;
+}
+.unitContainer .unitImage {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.unitContainer .unitContainerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3AA0F8;
+  font-weight: 400;
+  font-family: 'BoldenVan';
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+
+.unitContainer .unitContainerContent span {
+  margin-bottom: 1.5rem;
+}
+
+.unitContainer .businessHoursContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 6rem 2rem 2rem 2rem;
+  text-align: center;
+
+}
+
+.businessHoursContent .businessHoursDescription{
+  color: #4E5A70;
+  font-family: 'Nunito';
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* */
+
+.rechargeDescriptionSection {
+  margin-top: -150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/image-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 780px;
+  justify-content: center;
+}
+
+.rechargeDescriptionButton {
+  background-color: var(--white);
+  color: #FF8800;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px #D67404;
+}
+
+/*----------------SignUp Section-----------------*/
+
+.signUpSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, #2F5FDC 0%, #144CDB 100%);
+  position: relative;
+  margin-top: -100px;
+  z-index: -10;
+  padding: 12rem 0 20rem 0;
+}
+
+.signUpSection h2 {
+  font-family: 'BoldenVan';
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 60%;
+}
+
+.signUpSection h2 strong {
+  color: #FCD700;
+}
+
+.signUpSection form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signUpSection form input {
+  padding: 1rem 1rem;
+  color: #4E5A70;
+  border-radius: 8px;
+  border: 0;
+  min-width: 400px;
+}
+
+.signUpSection form label {
+  visibility: hidden;
+}
+
+.signUpSection form .agreementCheckContainer {
+  display: block;
+  position: relative;
+  visibility: visible;
+  cursor: pointer;
+  padding-left: 35px;
+  width: 400px;
+  color: var(--white);
+  font-weight: 800;
+  font-family: 'Nunito';
+  margin: 2rem 0;
+}
+
+
+.signUpSection form .agreementCheckContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.signUpSection form .agreementCheckContainer .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: solid 2px var(--white);
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.signUpSection form .agreementCheckContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.signUpSection form .agreementCheckContainer input:checked ~ .checkmark {
+  background-color: var(--white);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.signUpSection form .agreementCheckContainer .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.signUpSection form .agreementCheckContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.signUpSection form .agreementCheckContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #2F5FDC;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.signUpSection form .signUpButton {
+  background-color: #F58526;
+  color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px #B95F12;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/*-----------------Footer------------------------*/
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; 
+  height: 100%;
+  width: 100%;  
+}
+
+.footerContent .contentContainer {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  width: 100%;
+}
+
+.footerContent .contentContainer nav {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footerContent .contentContainer nav a {
+  color: var(--white);
+  font-family: 'Nunito';
+  font-family: 900;
+  line-height: 1.5rem;
+}
+
+.footerContent .contentContainer .addressContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+.authorContainer {
+  text-align: center;
+  font-family: 'Nunito';
+  color: var(--white);
+}
+
+.authorContainer p {
+  font-weight: 900;
+}
+
+.authorContainer span {
+  font-weight: 400;
+}
+
+.footerMobile {
+  background-color: #F53955;
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 2rem 2rem 2rem;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.footerMobile hr {
+  display: none;
+}
+
+.footerLogo {
+  display: none;
+}
+
+.contentMobile {
+  display: none;
+  width: 100%;
+  color: var(--white);
+}
+
+@media(max-width: 1100px) {
+  header {
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .playAreaButton {
+    display: none;
+  }
+
+  .footerContent {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .footerLogo {
+    display: block;
+  }
+
+  .contentMobile {
+    display: block;
+  }
+
+  .contentDesktop {
+    display: none;
+  }
+
+  .footerMobile hr {
+    display: block;
+    margin: 2rem 0;
+  }
+ }
